@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<title>信息导航主页</title>
+<style type="text/css">
+.button1 {
+    background-color: #000000; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.button1:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.dowebok { position: absolute; left: 50%; top: 50%; width: 430px; height: 500px; margin: 0px 0 0 -215px; border: 1px solid #fff; border-radius: 20px; overflow: hidden;}
+.logo { width: 104px; height: 104px; margin: 50px auto 80px; background: url(images/login.png) 0 0 no-repeat; }
+.form-item { position: relative; width: 360px; margin: 0 auto; padding-bottom: 30px;}
+.form-item input { width: 288px; height: 48px; padding-left: 70px; border: 1px solid #fff; border-radius: 25px; font-size: 18px; color: #fff; background-color: transparent; outline: none;}
+.form-item button { width: 360px; height: 50px; border: 0; border-radius: 25px; font-size: 18px; color: #1f6f4a; outline: none; cursor: pointer; background-color: #fff; }
+#username { background: url(images/emil.png) 20px 14px no-repeat; }
+#password { background: url(images/password.png) 23px 11px no-repeat; }
+.reg-bar { width: 360px; margin: 20px auto 0; font-size: 14px; overflow: hidden;}
+.reg-bar a { color: #fff; text-decoration: none; }
+.reg-bar a:hover { text-decoration: underline; }
+.reg-bar .reg { float: left; }
+.reg-bar .forget { float: right; }
+.dowebok ::-webkit-input-placeholder { font-size: 18px; line-height: 1.4; color: #fff;}
+.an{ padding-left: 55%;}
+@font-face {font-family: "iconfont";
+  src: url('font/iconfont.eot'); /* IE9*/
+  src: url('font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:26px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
+</head>
+
+<body>
+<div class="satic-area">
+	<br><br><br>
+<div class="an"> 
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+	  设为主页
+	</button>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+	  登录
+	</button>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+	  注册
+	</button>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">
+	  忘记密码
+	</button>
+</div>	
+<!-- 模态框1 -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">添加为浏览器主页</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+		<p>您正在使用搜狗浏览器，请参考如下步骤设置</p>		
+		<p>进入设置面板</p>
+		<p>点击工具，然后点击选项</p>
+		<p>设置主页</p>
+		<p>在基本设置页卡下，自定义主页即可</p>
+		<p>设置新标签页</p>
+		<p>在标签设置页卡下，自定义新建标签页时打开为本页面</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 模态框2 -->
+<form method="post" action="">
+<div class="modal fade" id="myModal2">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="dowebok">
+       <div class="logo"></div>
+        <div class="form-item">
+            <input id="username" type="text" autocomplete="off" placeholder="邮箱">
+        </div>
+        <div class="form-item">
+            <input id="password" type="password" autocomplete="off" placeholder="登录密码">
+        </div>
+       <div class="form-item"><button id="submit">登 录</button></div>
+    </div> 
+   </div>
+  </div>
+</div>
+<!-- 模态框3 -->
+<div class="modal fade" id="myModal3">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="dowebok">
+       <div class="logo"></div>
+        <div class="form-item">
+            <input id="username" type="text" autocomplete="off" placeholder="邮箱">
+        </div>
+        <div class="form-item">
+            <input id="password" type="password" autocomplete="off" placeholder="登录密码">
+        </div>
+       <div class="form-item"><button id="submit">注 册</button></div>
+    </div>
+   </div>
+  </div>
+</div>
+<!-- 模态框4 -->
+<div class="modal fade" id="myModal4">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="dowebok">
+       <div class="logo"></div>
+        <div class="form-item">
+            <input id="username" type="text" autocomplete="off" placeholder="请输入您注册的邮箱账号：">
+        </div>
+        <div class="form-item"><button id="submit">确 认</button></div>
+    </div>
+   </div>
+  </div>
+</div>
+<div class="container">
+<div class="search__container">
+    <input class="search__input" type="text" placeholder="搜一下就出来了">
+    <button class="bu" style="vertical-align:middle"><i class="icon iconfont">&#xe626;</i></button>
+</div>
+<!-- Tab panes -->
+<div class="tab-content demo">
+  <button class="button1">学生</button>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <button class="btn demo-transition">查分</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">看高校</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">查省线</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">名师在线咨询</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">高校对比</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">查全国线</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">语文辅导</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">数学辅导</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">英语辅导</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">地理辅导</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">生物辅导</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">政治辅导</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">物理辅导</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">化学辅导</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">小升初</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">考研资料</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">初升高</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">高考资料</button>
+    </li>
+  </ul>  
+  <button class="button1">家长</button>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <button class="btn demo-transition">高校信息</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">分数线</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">录取结果</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">高考复习资料</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">考研</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">复读报名</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">高中作息时间</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">分数线</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">录取结果</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">高考复习资料</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">考研</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">复读</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">高校信息</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">分数线</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">录取结果</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">高考复习资料</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">考研</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">复读</button>
+    </li>
+  </ul>  
+  <button class="button1">生活</button>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <button class="btn demo-transition">音乐</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">教育</button>
+    </li>
+    <li class="nav-item">
+      <button class="btn demo-transition">外教</button>
+    </li>
+  </ul>
+  </div>
+</div>
+</form>
+</body>
+
+</html>

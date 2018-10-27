@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>蜂鸟账号中心</title>
+<link rel="stylesheet" href="css/layui.css" type="text/css"/>
+<link href="css/defaultsite.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/canvas.css" type="text/css"/>
+<link rel="stylesheet" href="css/normalize.min.css">
+<link rel='stylesheet' href='css/style.css' type='text/css'>
+<link rel="stylesheet" href="css/login.css" type="text/css"/>
+<body>
+<div class="top">
+    <a class="logo" href="login.html"></a>
+    <ul>                          
+        <li><a href="login.html">登录</a></li>
+        <li><a href="register.html">注册</a></li>
+    </ul>
+</div>
+<div class="login-main">
+<div id="bg">
+	<canvas></canvas>
+	<canvas></canvas>
+	<canvas></canvas>
+</div>
+<div class="login-layer">
+	<img class="login-img" src="img/login-img.png">
+	<!-- 登录控件 -->
+	<div id="login" class="login-box" style="margin-top: 135px;">
+		<div class="wrapper">
+			<!-- 登录页面 -->
+			<div class="login sign-in-htm">
+				<form class="container offset1 loginform">
+					<!-- 猫头鹰控件 -->
+					<div id="owl-login" class="login-owl">
+						<div class="hand"></div>
+						<div class="hand hand-r"></div>
+						<div class="arms">
+							<div class="arm"></div>
+							<div class="arm arm-r"></div>
+						</div>
+					</div>
+		            <div class="login-box">
+					    <div class="login">
+							<p class="title">用户登录</p>
+						    <input type="text" placeholder="Username" autofocus/>
+						    <i class="fa layui-icon layui-icon-username"></i>
+						    <input type="password" placeholder="Password" id="login-password"/>
+						    <i class="fa layui-icon layui-icon-password"></i>
+						    <a href="#" class="left">忘记密码 ?</a>
+						    <a href="register.html" class="right" style="color: #FFC107;">立即注册</a>
+						    <button>
+						      <span class="state">登 录</span>
+						    </button>
+					    </div>
+		            </div>
+	            </form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="footer">Copyright © 2017-2018 wodezh.com All Rights Reserved.蜀ICP备18011916号</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/login.js"></script>
+<script src="js/canva_moving_effect.js"></script>
+</body>
+</html>
+
+
+

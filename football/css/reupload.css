@@ -1,0 +1,67 @@
+.mui-input-group .mui-button-row
+{
+	padding-top:50px;
+	height: 100px;
+	z-index: 99;
+}
+.form-group
+{
+	display: flex;
+	justify-content: space-between;
+}
+.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea
+{
+	width: 41%;
+}
+.mui-input-row select{padding-left: 10px;}
+.mui-input-row label
+{
+	width:59%;
+	text-align: center;
+
+}
+.mui-navigate-right:after, .mui-push-left:after, .mui-push-right:after{padding-left: 80%;}
+.mui-input-group .mui-input-row
+{
+	padding-top: 10px;
+}
+.box
+{
+	padding: 10px;
+	box-shadow: 0px 1px 1px 1px #cccccc;
+	margin: 0px 10px;
+}
+.reimg
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.reimg img
+{
+	border-radius: 4px;
+	padding: 10px;
+	width: 49%;
+	height: 200px;
+	border: solid #CCCCCC 1px;
+}
+.mui-bar-nav~.mui-content
+{
+	padding-top: 4rem;
+}
+.teamname
+{
+	font-size: 16px;
+}
+.ballplayer
+{
+	font-size: 18px;
+	width: 60% !important;
+}
+.choose
+{
+	width: 40% !important;
+	padding-left: 2rem;
+}
+.select{font-size: 18px;}
+.mui-btn-blue, .mui-btn-primary, input[type=submit]{padding: 6px 30px;}

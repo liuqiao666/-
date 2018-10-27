@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/mui.min.css">		
+		<link rel="stylesheet" href="css/reupload.css">		
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
+			<h1 class="mui-title">上传最终比分</h1>
+			<span class="mui-icon mui-icon-home right" onclick="location.href='index.html'"></span>
+		</header>
+			<div class="mui-content">
+				<form class="mui-input-group box" method="post" action="">
+					<div class="reimg">
+						<img src="img/cat.jpg">
+						<img src="img/yuantiao.jpg">
+					</div>
+					<div class="mui-input-row">
+						<label>A队</label>
+						<input type="text" placeholder="得分为...">
+					</div>
+					<div class="mui-input-row">
+						<label>B队</label>
+						<input type="text" placeholder="得分为...">
+					</div>
+					<div class="mui-button-row">
+						<button class="mui-btn mui-btn-primary" type="button" data-loading-icon="mui-spinner mui-spinner-custom">确认</button>
+					</div>
+				</form>
+			</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+		mui(document.body).on('tap', '.mui-btn', function(e) {
+		    mui(this).button('loading');
+		    setTimeout(function() {
+		        mui(this).button('reset');
+		        location.href='reupload3.html';
+		    }.bind(this), 2000);
+		});
+		</script>
+	</body>
+
+</html>
+							

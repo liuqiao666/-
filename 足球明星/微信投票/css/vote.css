@@ -1,0 +1,41 @@
+.left{float: left;}
+.left span
+{
+	padding: 0px 5px;
+}
+.right{float: right;}
+.newimg
+{
+	height:46px; 
+	width:20px;
+}
+.newsimg
+{
+	width: 20px;
+	padding:13px 0px;
+}
+.hui-flex
+{
+	background:#FFF; 
+	padding:44px 15px 0px 15px; 
+}
+.hui-button
+{
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	padding: 0px 8px;
+	float: right;
+	margin-right: 5px;
+}
+.hui-water-items-text{margin-top: 10px;}
+.flexdiv{padding: 0px;}
+.block{width:100%; height:80px; text-align:center; color:#FFF; line-height:40px; font-size:22px;background-color: rgba(238,75,71,0.8);}
+.orange{font-size:18px;color: #fff;}
+.white{font-size: 26px;color: #fff;}
+.blue{color: dodgerblue;}
+/* icon toast */
+#hui-icon-toast{width:258px; position:fixed; z-index:99999; left:50%; top:50%; -webkit-transform:translate(-50%, -50%); transform:translate(-50%, -50%); -moz-transform:translate(50%, 50%); -o-transform:translate(50%, 50%); background-color:#FFFFFF; border-radius:5px;}
+#hui-icon-toast *{color:#000;}
+#hui-icon-toast .hui-icons{text-align:center; font-size:50px; height:40px; font-weight:700; line-height:40px; padding:48px 0px;color: mediumseagreen;}
+#hui-icon-toast .hui-text-center{line-height:1.5em; padding-bottom:15px; font-size:16px; margin-top:8px;}

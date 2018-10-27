@@ -1,0 +1,182 @@
+body
+{
+	font-size: 15px;
+}
+input[type=search]
+{
+	height: 40px;
+	background-color: #f7f7f7;
+}
+.mui-btn, button, input[type=button], input[type=reset], input[type=submit]
+{
+	position: absolute;
+	padding: 9px 12px;
+}
+.ss
+{
+	position: absolute;
+	margin-left: 10px;
+}
+.mui-search input[type=search]{border: solid #CCCCCC 1px;background-color: #fff;}
+.marchicon{width: 10%;top:10px;float: left;right: 5px;}
+.vsicon{width: 80%;}
+.vst1{display:inline-block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: auto;max-width: 45%;}
+.mui-navigate-right:after, .mui-push-right:after
+{
+	color: #000;
+	font-size: 20px;
+	padding-left: 10px;
+}
+.mui-navigate-right font
+{
+	margin: 0px 10px;
+	padding-right: 10px;
+}
+.mui-table-view
+{
+	height: 30rem;
+	overflow: auto;
+	padding: 0px 10px;
+}
+.mui-table-view-cell
+{
+	padding: 15px 15px;
+}
+.messages
+{
+	border: solid #E3E3E3 1px;
+	border-radius: 2px;
+}
+.mui-table-view-cell.mui-active{
+	background-color: #0062CC;
+}
+.mui-search .mui-placeholder .mui-icon
+{
+	margin-top: 8px;
+	font-size: 24px;
+}
+.mui-input-group .mui-button-row{height: 50px;}
+.mui-input-group
+{
+	position:relative;
+	margin: 0px 10px;
+	padding: 20px 20px;
+	box-shadow: 0px 5px 5px #cccccc;
+}
+.mui-button-row{padding-top: 20px;}
+.groupp
+{
+	border-bottom: 1px solid #DDDDDD;
+}
+.contentt
+{
+	padding-top:45%;
+}
+.mui-bar
+{
+	-webkit-box-shadow:0 0 1px rgba(0,0,0,.35)
+}
+.mui-input-row label
+{
+	padding: 11px 0px;
+	font-size: 16px;
+}
+.mui-icon
+{
+	font-size: 26px;
+}
+.mui-button-row
+{
+	margin-left: -25%;
+}
+.mui-btn-blue, .mui-btn-primary, input[type=submit]{padding: 6px 30px;}
+.mui-bar .mui-icon{padding-top: 0px;padding-right: 10px;}
+.titlep{margin:5px 0px;padding: 0px 10px;float: left;display: inline-block;color: #000000;font-size: 16px;padding-top: 5px;}
+input[type=color], input[type=date], input[type=datetime-local], 
+input[type=datetime], input[type=email], input[type=month], input[type=number], 
+input[type=password], input[type=search], input[type=tel], input[type=text], 
+input[type=time], input[type=url], input[type=week], select, textarea{
+	width: 100%;
+}
+@media (min-width: 300px) and (max-width: 321px) {
+	.mui-table-view
+	{
+		height: 25rem;
+		overflow: auto;
+	}
+input[type=color], input[type=date], input[type=datetime-local], 
+input[type=datetime], input[type=email], input[type=month], input[type=number], 
+input[type=password], input[type=search], input[type=tel], input[type=text], 
+input[type=time], input[type=url], input[type=week], select, textarea{
+		width: 100%;
+	}
+	.mui-input-row label{width: 25%;}
+	.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea
+	{
+		width:75%;
+	}
+	.mui-table-view-cell>a:not(.mui-btn){margin: -15px;}
+	.mui-navigate-right font{font-size: 12px;}
+	.mui-search .mui-placeholder{padding-right: 120px;font-size: 14px;}
+	.icon-match:before { content: "\e600";font-size: 28px; }
+	.icon-vs1:before { content: "\e74f";color: #F0AD4E;font-size: 26px; }
+} 
+@media (min-width: 322px) and (max-width: 374px) {
+	.mui-table-view
+	{
+		height: 28rem;
+		overflow: auto;
+	}
+input[type=color], input[type=date], input[type=datetime-local], 
+input[type=datetime], input[type=email], input[type=month], input[type=number], 
+input[type=password], input[type=search], input[type=tel], input[type=text], 
+input[type=time], input[type=url], input[type=week], select, textarea{
+		width: 100%;
+	}
+	.mui-search .mui-placeholder{padding-right: 160px;font-size: 14px;}
+	.icon-match:before { content: "\e600";font-size: 28px; }
+	.icon-vs1:before { content: "\e74f";color: #F0AD4E;font-size: 26px; }
+}
+@media (min-width: 375px) and (max-width: 399px) {
+	.mui-table-view
+	{
+		height: 29rem;
+		overflow: auto;
+	}
+input[type=color], input[type=date], input[type=datetime-local], 
+input[type=datetime], input[type=email], input[type=month], input[type=number], 
+input[type=password], input[type=search], input[type=tel], input[type=text], 
+input[type=time], input[type=url], input[type=week], select, textarea{
+		width: 100%;
+	}
+	.mui-search .mui-placeholder{padding-right: 160px;}
+	.icon-match:before { content: "\e600";font-size: 28px; }
+	.icon-vs1:before { content: "\e74f";color: #F0AD4E;font-size: 26px; }
+}
+@media (min-height: 667px){
+	.mui-table-view
+	{
+		overflow: auto;
+	}
+}
+@media (min-width: 400px) and (max-width: 420px) {
+	.mui-table-view
+	{
+		height: 34.5rem;
+		overflow: auto;
+	}
+}
+@media (min-height: 823px){
+	.mui-table-view
+	{
+		height: 39.5rem;
+		overflow: auto;
+	}
+input[type=color], input[type=date], input[type=datetime-local], 
+input[type=datetime], input[type=email], input[type=month], input[type=number], 
+input[type=password], input[type=search], input[type=tel], input[type=text], 
+input[type=time], input[type=url], input[type=week], select, textarea{
+		width: 100%;
+	}
+}
+.mui-bar-nav.mui-bar .mui-icon{padding-left: 0px;}

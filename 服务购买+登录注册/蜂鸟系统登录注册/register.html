@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>蜂鸟账号中心</title>
+<link rel="stylesheet" href="css/canvas.css" type="text/css"/>
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/layui.css" type="text/css"/>
+<link rel="stylesheet" href="css/defaultsite.css" type="text/css" />
+<link rel="stylesheet" href="css/register.css" type="text/css"/>
+</head>
+<body>
+<div class="fixed-top">
+	<div class="top">
+	    <a class="logo" href="login.html"></a>
+	    <ul>                          
+	        <li><a href="login.html">登录</a></li>
+	        <li><a href="register.html">注册</a></li>
+	    </ul>
+	</div>
+</div>	
+<div class="main-wrapper">
+	<div id="bg" style="height: 102%;">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+	</div>
+<!-- box body -->
+<div class="panel-body">
+	<div class="login-box">
+		<div class="main bgf">    
+	    	<div class="reg-box-pan display-inline">  
+	        	<div class="step">        	
+	                <ul>
+	                    <li class="col-xs-4 on">
+	                        <span class="num"><em class="f-r5"></em><i>1</i></span>                	
+	                        <span class="line_bg lbg-r"></span>
+	                        <p class="lbg-txt">填写基本信息</p>
+	                    </li>
+	                    <li class="col-xs-4">
+	                        <span class="num"><em class="f-r5"></em><i>2</i></span>
+	                        <span class="line_bg lbg-l"></span>
+	                        <span class="line_bg lbg-r"></span>
+	                        <p class="lbg-txt">账号激活</p>
+	                    </li>
+	                    <li class="col-xs-4">
+	                        <span class="num"><em class="f-r5"></em><i>3</i></span>
+	                        <span class="line_bg lbg-l"></span>
+	                        <p class="lbg-txt">登录系统</p>
+	                    </li>
+	                </ul>
+	            </div>
+	        	<div class="reg-box" id="verifyCheck">
+	            	<div class="part1" style="display:block">
+	            	  <form class="layui-form" method="post" action="">
+	                    <div class="item col-xs-12">
+	                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>手机号：</span>    
+	                        <div class="f-fl item-ifo">
+	                            <input name="phonenumber" lay-filter="phonenumber" autofocus type="text" class="txt03 f-r3 required" keycodes="tel" tabindex="2" data-valid="isNonEmpty||isPhone" data-error="手机号码不能为空||手机号码格式不正确" maxlength="11" id="phone" /> 
+	                            <span class="ie8 icon-close close hide"></span>                           
+	                            <label class="icon-sucessfill blank hide"></label>
+	                            <label class="focus">请填写11位有效的手机号码</label>
+	                            <label class="focus valid"></label>
+	                        </div>
+	                    </div>
+	                    <div class="item col-xs-12">
+	                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>密码：</span>    
+	                        <div class="f-fl item-ifo">
+	                            <input name="password" lay-filter="password" type="password" id="password" maxlength="20" class="txt03 f-r3 required" tabindex="3" style="ime-mode:disabled;" onpaste="return  false" autocomplete="off" data-valid="isNonEmpty||between:6-12||level:2" data-error="密码不能为空||密码长度6-12位||该密码太简单，有被盗风险，建议字母+数字的组合" /> 
+	                            <span class="ie8 icon-close close hide" style="right:55px"></span>
+	                            <span class="showpwd" data-eye="password"></span>                        
+	                            <label class="icon-sucessfill blank hide"></label>
+	                            <label class="focus">6-12位英文（区分大小写）、数字、字符的组合</label>
+	                            <label class="focus valid"></label>
+	                            <span class="clearfix"></span>
+	                            <label class="strength">
+	                            	<span class="f-fl f-size12">安全程度：</span>
+	                            	<b><i>弱</i><i>中</i><i>强</i></b>
+	                            </label>    
+	                        </div>
+	                    </div>
+	                    <div class="item col-xs-12">
+	                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>确认密码：</span>    
+	                        <div class="f-fl item-ifo">
+	                            <input name="cfpassword" lay-filter="cfpassword" type="password" maxlength="20" class="txt03 f-r3 required" tabindex="4" style="ime-mode:disabled;" onpaste="return  false" autocomplete="off" data-valid="isNonEmpty||between:6-16||isRepeat:password" data-error="密码不能为空||密码长度6-16位||两次密码输入不一致" id="rePassword" />
+	                            <span class="ie8 icon-close close hide" style="right:55px"></span>
+	                            <span class="showpwd" data-eye="rePassword"></span>
+	                            <label class="icon-sucessfill blank hide"></label>
+	                            <label class="focus">请再输入一遍上面的密码</label> 
+	                            <label class="focus valid"></label>                          
+	                        </div>
+	                    </div>
+	                    <!--<div class="item col-xs-12">
+	                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>真实姓名：</span>    
+	                        <div class="f-fl item-ifo">
+	                            <input type="text" maxlength="10" class="txt03 f-r3 required" tabindex="1" data-valid="isNonEmpty||between:2-10||isZh" data-error="真实姓名不能为空||真实姓名长度2-10位||只能输入中文" id="adminNo" />   
+	                            <span class="ie8 icon-close close hide"></span>                         
+	                            <label class="icon-sucessfill blank hide"></label>
+	                            <label class="focus">2-10位，中文真实姓名</label>
+	                            <label class="focus valid"></label>
+	                        </div>
+	                    </div>-->
+	                    <div class="item col-xs-12">
+	                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>姓名：</span>    
+	                        <div class="f-fl item-ifo">
+	                            <input name="username" lay-filter="username" type="text" maxlength="20" class="txt03 f-r3 required" data-valid="isNonEmpty||between:2-20||isUname" data-error="用户名不能为空||用户名长度2-20位||只能输入中文、字母、数字、下划线，且以中文或字母开头" id="adminNo" />                            
+	                            <span class="ie8 icon-close close hide"></span>
+	                            <label class="icon-sucessfill blank hide"></label>
+	                            <label class="focus"><span>2-20位，中文、字母、数字、下划线的组合，以中文或字母开头，真实姓名,注册后可以设置昵称</span></label>
+	                            <label class="focus valid"></label>
+	                        </div>
+	                    </div>
+	                    <div class="item col-xs-12">
+	                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>身份证号：</span>    
+	                        <div class="f-fl item-ifo">
+	                            <input name="idcard" lay-filter="idcard" type="text" class="txt03 f-r3 required" data-valid="isNonEmpty||isCard" data-error="身份证号不能为空||身份证号码格式不正确" maxlength="18" id="phone" />    
+	                            <span class="ie8 icon-close close hide"></span>                        
+	                            <label class="icon-sucessfill blank hide"></label>
+	                            <label class="focus">请填写18位有效的身份证号</label>
+	                            <label class="focus valid"></label>
+	                        </div>
+	                    </div>
+	                     <div class="item col-xs-12">
+	                     	<span class="intelligent-label f-fl"><b class="ftx04">*</b>类别：</span>  
+	                     	<div class="f-fl item-ifo">
+								<input id="student" type="radio" name="user_type" lay-filter="user_type" lay-verify="required" value="1" title="学生" checked="checked">
+	                            <input id="teacher" type="radio" name="user_type" lay-filter="user_type" lay-verify="required" value="2" title="教师">                      
+	                     	</div>
+	                     </div>
+	                    <div class="item col-xs-12"> 
+	                    	<span class="intelligent-label f-fl"><b class="ftx04">*</b>地区：</span>  
+                    	    <div class="layui-input-inline">
+                                <select name="province" id="param_province" lay-filter="province" lay-verify="required"> 
+                                    <option value="">请选择省份</option>
+                                </select>
+                            </div>
+                            <div class="layui-input-inline">
+                                <select name="city" id="param_city" lay-filter="city" lay-verify="required" lay->
+                                    <option value="0">请选择地市州</option>
+                                </select>
+                            </div>
+                            <!--<label class="focus valid mleft370">地区选项不能为空</label>-->
+	                    </div>
+	                    <div class="item col-xs-12"> 
+	                    	<span class="intelligent-label f-fl"><b class="ftx04">*</b><font id="lb_school">学校：</font></span> 
+	                    	<div class="layui-input-inline">
+                                <input lay-filter="search-school" type="text"  id="school_name" class="txt03 f-r3 required" placeholder="搜索选择.."  autocomplete="off" class="layui-input" data-valid="isNonEmpty" data-error="学校名称不能为空">
+                            	<span class="ie8 icon-close close hide"></span>                        
+	                            <label class="icon-sucessfill blank hide"></label>
+	                            <label class="focus">请填写正确的学校名称</label>
+                            	<label class="focus valid"></label>
+	                    	</div>
+	                    </div>
+	                    <div class="item col-xs-12"> 
+	                    	<span class="intelligent-label f-fl" id="lb_school"><b class="ftx04">*</b>已选学校：</span> 
+							<div class="layui-input-inline w-220" style="float: left;">
+                                <input lay-filter="check-school" type="text" class="txt03 f-r3" id="selected_school" style="border: 0" disabled autocomplete="off">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">
+                            	<i class="layui-icon layui-icon-about help-tip size" data-tip="在上面文本框选择学校后，这里出现学校名称才算正确选择学校。"></i>
+                            </div>
+	                    </div>
+	                    <div class="item col-xs-12" id="grade_box"> 
+	                    	<span class="intelligent-label f-fl"><b class="ftx04">*</b><font id="lb_grade">阶段：</font></span> 
+                            <div class="layui-input-inline w-220">
+                                <select id="grade_num" name="grade_num" lay-filter="grade_num" lay-verify="required" class="txt03 f-r3">
+                                    <option value="0">--请选择--</option>
+                                    <option value="1">一年级</option>
+                                    <option value="2">二年级</option>
+                                    <option value="3">三年级</option>
+                                    <option value="4">四年级</option>
+                                    <option value="5">五年级</option>
+                                    <option value="6">六年级</option>
+                                    <option value="7">七年级</option>
+                                    <option value="8">八年级</option>
+                                    <option value="9">九年级</option>
+                                    <option value="10">高一</option>
+                                    <option value="11">高二</option>
+                                    <option value="12">高三</option>
+                                </select>         
+                            </div>
+                            <!--<label class="focus valid mleft100">年级选项不能为空</label>-->
+	                    </div>
+	                    <div class="item col-xs-12">
+	                        <span class="intelligent-label f-fl">&nbsp;</span>    
+	                        <div class="f-fl item-ifo">
+	                           <button lay-submit class="btn btn-blue f-r3" id="btn_part1" lay-filter="btn_part1">下一步</button>                         
+	                        </div>
+	                    </div> 
+	                </form>
+	             </div>
+	                <div class="part2 panel-wrapper" style="display:none">                   
+		                <div class="panel-body">
+		                    <div class="center">
+		                        <div><img src="img/default.jpg" class="qrcode"></div>
+		                        <input type="hidden" id="phone" value="13209166720">
+		                        <div><input type="button" id="btn_part2" class="layui-btn layui-btn-warm" value="激  活  成  功,下 一 步" /></div>
+		                    </div>
+		                    <fieldset class="layui-elem-field layui-field-title">
+		                        <legend>扫描二维码激活，操作步骤</legend>
+		                    </fieldset>
+		                    <blockquote class="layui-elem-quote layui-quote-nm">
+		                        第一步、打开微信扫描上面二维码并关注<br>
+		                        第二步、回复你注册时填写的手机号和密码，用空格分开，例如：<i>18202819999 123456</i><br>
+		                        第三步、如果第二步提示激活成功,点击上面[激活成功]按钮，进入下一步
+		                    </blockquote>
+		                    <div>
+		                        <img src="img/wx1.png" class="wx">
+		                        <img src="img/wx2.png" class="wx">
+		                        <img src="img/wx3.png" class="wx">
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="part3 text-center" style="display:none">
+	                	<h3>恭喜您激活成功!</h3>
+	                    <p class="c-666 f-mt30 f-mb50">页面将在 <strong id="times" class="f-size18">10</strong> 秒钟后，跳转到 <a href="login.html" class="blue">用户登录页面</a></p>
+	                </div>          
+	            </div>
+	        </div>
+	    </div>
+	</div>
+   </div>
+  </div>
+</div>
+    
+<div class="footer" style="color: #000;">Copyright © 2017-2018 wodezh.com All Rights Reserved.蜀ICP备18011916号</div>
+
+<script type="text/javascript" src="https://www.wodezh.com/packages/layui-v2.3.0/layui/layui.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/canva_moving_effect.js"></script>
+<script src="js/register.js"></script>
+<script type="text/javascript" src="js/site-utils.js?v=0.5"></script>
+<script type="text/javascript" src="js/province_city.js"></script>
+<script type="text/javascript">
+layui.use(['element','form','layer'], function(){
+    var form = layui.form,layer = layui.layer;
+    /**
+     * 省市联动
+    */
+    form.on('select(province)', function(data){
+        provincechange(data.elem.selectedIndex);
+    });
+    /**
+     * 学生、教师选择
+    */
+    form.on('radio(user_type)', function(data){
+        if(data.value==1){
+            $('#lb_school').text('就读学校');
+            $('#lb_grade').text('年级');
+            $('#grade_box').show();
+        }else{
+            $('#lb_school').text('任教学校');
+            $('#grade_box').hide();
+        }
+    });
+    form.on('submit(btn_part1)', function(data){
+		//第一页的确定按钮
+		$("#btn_part1").click(function(){						
+			if(!verifyCheck._click()) return;
+			$(".part1").hide();
+			$(".part2").show();
+			$(".step li").eq(1).addClass("on");
+		});
+		console.log(data.field) //当前容器的全部表单字段，名值对形式：{name: value}
+	    return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+	});
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

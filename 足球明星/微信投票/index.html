@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>艺术明星投票</title>
+<link rel="stylesheet" type="text/css" href="css/hui.css" />
+<link rel="stylesheet" type="text/css" href="css/vote.css" />
+</head>
+<body style="background:#F4F5F6;">
+<header class="hui-header">
+    <div id="hui-header-sreach">
+    	<div id="hui-header-sreach-icon"></div>
+		<form><input type="search" id="searchKey" onkeydown="if(event.keyCode==13)return false;" placeholder="请输入查询编号" /></form>
+	</div>
+</header>
+<div class="hui-flex">
+	<div class="newimg">
+		<img src="img/spiker.png" class="newsimg"/>
+	</div>
+	<div class="hui-scroll-news" id="scrollnew">
+		<div class="hui-scroll-news-items"><a href="javascript:hui.toast('test...');">每个账号一天只能投一票</a></div>
+		<div class="hui-scroll-news-items">快去投出您宝贵的一票吧</div>
+	</div>
+</div>
+<div class="hui-wrap">
+    <div class="hui-flex flexdiv">
+		<div class="block"><span class="orange">已报名</span><br><span class="white">1456</span></div>
+		<div class="block"><span class="orange">投票人次</span><br><span class="white">10076</span></div>
+		<div class="block"><span class="orange">访问量</span><br><span class="white">10098</span></div>
+	</div>
+    <div style="padding:10px 0px;" id="HUI_Waterfall"></div>
+</div>
+<script src="js/hui.js"></script>
+<script src="js/hui-water-fall.js"></script>
+<script src="js/hui-refresh-load-more.js"></script>
+<script src="js/vote.js"></script>
+<script src="js/jquery.1.4.2-min.js"></script>
+<script src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+hui('#btn').click(function(){hui.iconToast('投票成功', 'success');});
+/*hui('#btn').click(function(){hui.iconToast('你已经投过了', 'warn');});*/
+</script>
+</body>
+</html>

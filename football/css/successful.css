@@ -1,0 +1,60 @@
+.reimg
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.reimg .box
+{
+	width: 50%;
+}
+.reimg .box img
+{
+	width: 99%;
+	padding: 10px;
+	height: 150px;
+}
+.reimg .box p
+{
+	text-align: center;
+	color: #000000;
+	background-color: #C4E3F3;
+	width: 100%;
+	padding: 10px;
+}
+.mui-icon
+{
+	font-size: 22px;
+}
+ul
+{
+	width: 100%;
+	padding: 0px 5px;
+}
+li
+{
+	font-size: 14px;
+	text-align: left;
+	list-style: none;
+}
+.mui-card
+{
+	margin: 5px;
+}
+.mui-row
+{
+	padding: 10px 0px;
+	box-shadow: 0px 0px 1px #cccccc;
+}
+.mui-row span span
+{
+	font-size: 14px;
+	display: inline-block;
+
+}
+.number
+{
+	padding-right: 5px;
+	float: right;
+	display: inline-block;
+}

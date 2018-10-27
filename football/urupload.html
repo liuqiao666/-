@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap-fileinput.css">
+		<link rel="stylesheet" href="css/mui.min.css">
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.back()"></span>
+			<h1 class="mui-title">发表评论</h1>
+			<span class="mui-icon mui-icon-home right" onclick="location.href='index.html'"></span>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded" style="margin: 5px;">
+				<form method="post" action="">
+					<div class="mui-input-row" style="margin: 10px 5px;">
+						<textarea id="textarea" rows="6" placeholder="请输入你要发表的评论..."></textarea>
+					</div>
+					<div class="mui-input-row">
+						<div class="container">
+						    <div class="page-header">
+					            <div class="form-group" id="uploadForm" enctype='multipart/form-data'>
+					                <div class="fileinput fileinput-new" data-provides="fileinput"  id="exampleInputUpload">
+					                    <div class="fileinput-new thumbnail">
+					                        <img id='picImg' class="picImg" src="img/noimage.png" alt="" />
+					                    </div>
+					                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+					                    <div>
+					                        <span class="btn btn-primary btn-file">
+					                            <span class="fileinput-new">选择图片</span>
+					                            <span class="fileinput-exists">换一张</span>
+					                            <input type="file" name="pic1" id="picID" accept="image/*"/>
+					                        </span>
+					                        <a href="javascript:;" class="btn btn-warning fileinput-exists" data-dismiss="fileinput">移除</a>
+					                    </div>
+					                </div>
+					            </div>
+						    </div>
+						</div>
+					</div>
+					<div class="mui-button-row">
+						<button type="button" class="mui-btn mui-btn-primary" data-loading-icon="mui-spinner mui-spinner-custom">确认</button>&nbsp;&nbsp;
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-fileinput.js"></script>
+		<script type="text/javascript">
+		$(function () {
+		    //比较简洁，细节可自行完善
+		    $('#uploadSubmit').click(function () {
+		        var data = new FormData($('#uploadForm')[0]);
+		        $.ajax({
+		            url: 'xxx/xxx',
+		            type: 'POST',
+		            data: data,
+		            async: false,
+		            cache: false,
+		            contentType: false,
+		            processData: false,
+		            success: function (data) {
+		                console.log(data);
+		                if(data.status){
+		                    console.log('upload success');
+		                }else{
+		                    console.log(data.message);
+		                }
+		            },
+		            error: function (data) {
+		                console.log(data.status);
+		            }
+		        });
+		    });
+		})
+		</script>
+		<script type="text/javascript">
+		mui(document.body).on('tap', '.mui-btn', function(e) {
+		    mui(this).button('loading');
+		    setTimeout(function() {
+		        mui(this).button('reset');
+		        location.href='live.html';
+		    }.bind(this), 2000);
+		});
+		</script>
+    </body>   
+</html>  
+	</body>
+
+</html>
